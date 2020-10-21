@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <script>
+      /* 
+       * addEventListener 注册事件
+       *
+       * capture，布尔值，和 useCapture 作用一样
+       * once，布尔值，值为 true 表示该回调只会调用一次，调用后会移除监听
+       * passive，布尔值，表示永远不会调用 preventDefault
+       */
+      function func(e) {
+        // window.event.preventDefault();
+        return false;
+      }
+      document.addEventListener("DOMContentLoaded", function (event) {
+        button.addEventListener("click", (e) => {
+          // 阻止冒泡事件
+          e.stopPropagation();
+          // 实现阻止冒泡、捕获事件，但是还能阻止该事件目标执行别的注册事件。
+          e.stopImmediatePropagation();
+          console.log("button1");
+        });
+        button.addEventListener(
+          "click",
+          () => {
+            console.log("button2");
+          },
+          true
+        );
+        form.addEventListener("click", (e) => {
+          e.preventDefault();
+          console.log("冒泡");
+        });
+        form.addEventListener(
+          "click",
+          () => {
+            console.log("捕获");
+          },
+          true
+        );
+      });
+    </script>
+  </head>
+  <body>
+    <form action="index.html" id="form" onsubmit="return func(event)">
+      <input value="button" />
+      <button type="submit" id="button">提交</button>
+    </form>
+  </body>
+</html>
