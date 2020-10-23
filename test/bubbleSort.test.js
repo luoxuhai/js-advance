@@ -1,8 +1,10 @@
+const _ = require("lodash");
 const bubbleSort = require("../bubbleSort");
+const { sampleArray } = require("../utils");
 
 describe("冒泡排序", () => {
   it("从小到大排序数组", () => {
-    const arr = [2, 5, 66];
-    expect(bubbleSort(arr)).toEqual(arr);
+    const array = sampleArray();
+    expect(bubbleSort(_.cloneDeep(array))).toEqual(array.sort((a, b) => a - b));
   });
 });
