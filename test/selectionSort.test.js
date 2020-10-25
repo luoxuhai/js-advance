@@ -2,7 +2,7 @@ const _ = require("lodash");
 const selectionSort = require("../algorithm/selectionSort");
 const { sampleArray } = require("../utils");
 
-describe("选择排序", () => {
+describe("选择排序-简单选择排序", () => {
   it("从小到大排序数组", () => {
     const array = sampleArray();
     expect(selectionSort(_.cloneDeep(array))).toEqual(
