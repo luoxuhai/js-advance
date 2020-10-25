@@ -1,5 +1,5 @@
 const _ = require("lodash");
-const selectionSort = require("../selectionSort");
+const selectionSort = require("../algorithm/selectionSort");
 const { sampleArray } = require("../utils");
 
 describe("选择排序", () => {

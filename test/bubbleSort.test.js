@@ -1,5 +1,5 @@
 const _ = require("lodash");
-const bubbleSort = require("../bubbleSort");
+const bubbleSort = require("../algorithm/bubbleSort");
 const { sampleArray } = require("../utils");
 
 describe("冒泡排序", () => {

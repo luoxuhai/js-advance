@@ -1,6 +1,6 @@
 # js-interview
 
 ```bash
-npm i
+npm install
 npm run test
 ```

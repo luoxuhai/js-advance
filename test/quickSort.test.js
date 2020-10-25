@@ -1,5 +1,5 @@
 const _ = require("lodash");
-const quickSort = require("../quickSort");
+const quickSort = require("../algorithm/quickSort");
 const { sampleArray } = require("../utils");
 
 describe("快速排序", () => {
