@@ -2,6 +2,11 @@
  * 归并排序
  *
  * 最好O(nlogn) 最坏O(nlogn) 平均O(nlogn)
+ * 
+ * 1. 申请空间，该空间用来存放合并后的序列
+ * 2. 比较相同索引元素的大小，放入已排序数组
+ * 3. 将另一数组剩下的放入已排序数组
+ * 4. 重复以上操作
  */
 function mergeSort(array) {
   const len = array.length

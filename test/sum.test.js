@@ -1,4 +1,4 @@
-const sum = require("../sum");
+const sum = require("../algorithm/sum");
 
 describe("两个数不使用四则运算得出和", () => {
   it("`0 + 5 = 5`", () => {

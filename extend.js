@@ -1,19 +1,26 @@
 /**
  * ES5 继承
  */
-function Super() {}
-Super.prototype.getStr = function () {
-  return "Super";
+function Parent(name) {
+  this.name = name;
+}
+Parent.prototype.getMessage = function () {
+  return "Parent:" + this.name;
 };
 
-function Sub() {}
-Sub.prototype = Object.create(Super.prototype, {
+function Child(name) {
+  Parent.call(this, name);
+}
+// Object.create是创建了父类原型的副本，与父类原型完全隔离
+Child.prototype = Object.create(Parent.prototype, {
   constructor: {
-    value: Sub,
-    enumerable: false,
+    value: Child,
     writable: true,
     configurable: true,
   },
 });
+Child.prototype.getMessage = function () {
+  return "Child:" + this.name;
+};
 
-module.exports = Sub;
+module.exports = { Parent, Child };

@@ -1,5 +1,6 @@
 /**
  * 数组去重
+ *
  * @param {(number | string)[]} array
  * @returns {(number | string)[]}
  */

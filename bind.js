@@ -29,6 +29,7 @@ function bind1(thisArg = window || global, ...args) {
     );
   const _this = this;
   return function func() {
+    // 检测构造函数的 prototype 属性是否出现在某个实例对象的原型链上。
     if (this instanceof func) return new _this(...args, ...arguments);
     return _this.call(thisArg, ...args, ...arguments);
     // return _this.apply(thisArg, [...args, ...arguments]);
