@@ -3,7 +3,7 @@
  */
 function _setInterval(callback, time, ...args) {
   setTimeout(
-    (...args) => {
+    function (...args) {
       callback.call(this, ...args);
       _setInterval(callback, time);
     },

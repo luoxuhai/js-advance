@@ -10,10 +10,12 @@
    - [插入排序](./algorithm/insertionSort.js)
    - [希尔排序](./algorithm/shellSort.js)
    - [归并排序](./algorithm/mergeSort.js)
+   - [堆排序](./algorithm/heapSort.js)
    - [二分查找](./algorithm/binarySerach.js)
-   - [数组去重](./algorithm/binarySerach.js)
+   - [数组去重](./algorithm/unique.js)
    - [两个数不使用四则运算得出和](./algorithm/sum.js)
    - [数组扁平化](./algorithm/flatten.js)
+   - [最长递增子序列](./algorithm/lis.js)
 
 2. ### 字符串
 
