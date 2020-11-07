@@ -9,13 +9,13 @@ describe("EventBus 订阅-发布设计模式", () => {
     });
     setTimeout(() => {
       eventBus.emit("click", "F1");
-    }, 100);
+    }, 20);
   });
   it("移除`click`", (done) => {
     setTimeout(() => {
       eventBus.remove("click");
       expect(eventBus.events.size).toBe(0);
       done();
-    }, 200);
+    }, 100);
   });
 });

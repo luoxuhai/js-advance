@@ -1,6 +1,8 @@
 /**
  * 堆排序
  *
+ * 最好O(nlogn) 最坏O(nlogn) 平均O(nlogn)
+ *
  * @param {(number | string)[]} array
  * @returns {(number | string)[]}
  */
@@ -34,13 +36,13 @@ function adjustHeap(array, i, length) {
     if (j + 1 < length && array[j] < array[j + 1]) {
       j++;
     }
-    // 如果父节点小于子节点则交换；否则跳出
+    // 如果父节点小于子节点则交换
     if (temp < array[j]) {
       array[i] = array[j];
       array[j] = temp;
       // 交换后，temp 的下标变为 j
       i = j;
-    } else break;
+    }
   }
 }
 

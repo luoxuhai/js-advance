@@ -39,4 +39,23 @@ describe("实现Promise", () => {
       expect(reason).toBe("error");
     });
   });
+  it("静态方法`all race`", (done) => {
+    const p1 = Promise.resolve(3);
+    const p2 = 42;
+    const p3 = new _Promise((resolve) => {
+      setTimeout(resolve, 100, "foo");
+    });
+    const p4 = new Promise((resolve) => {
+      setTimeout(resolve, 500, "one");
+    });
+
+    _Promise.all([p1, p2, p3]).then((value) => {
+      done();
+      expect(value).toEqual([3, 42, "foo"]);
+    });
+    _Promise.race([p3, p4]).then((value) => {
+      done();
+      expect(value).toBe("foo");
+    });
+  });
 });

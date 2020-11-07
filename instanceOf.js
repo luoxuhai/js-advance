@@ -4,8 +4,9 @@
  * @param {Function} constructor 构造函数
  * @returns {boolean} 构造函数的prototype属性是否出现在实例对象的原型链上
  */
-function instanceOf(object, constructor) {
-  if (!/Object|Function/.test(Object.prototype.toString.call(object))) return false;
+function _instanceof(object, constructor) {
+  if (!/Object|Function/.test(Object.prototype.toString.call(object)))
+    return false;
   if (typeof constructor !== "function")
     throw TypeError("constructor is not an function");
 
@@ -18,4 +19,4 @@ function instanceOf(object, constructor) {
   return true;
 }
 
-module.exports = instanceOf;
+module.exports = _instanceof;
