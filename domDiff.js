@@ -77,4 +77,4 @@ function childrenWalk(oldChildren, children) {
   });
 }
 
-module.exports = domDiff;
+module.exports = { domDiff, TEXT, ATTR, REMOVE, REPLACE };

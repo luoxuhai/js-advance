@@ -1,4 +1,4 @@
-const domDiff = require("../domDiff");
+const { domDiff } = require("../domDiff");
 const { createElement } = require("../vDom");
 
 it("虚拟DOM diff算法", () => {
