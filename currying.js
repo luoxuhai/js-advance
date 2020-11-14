@@ -20,4 +20,22 @@ function sum(...args1) {
   };
 }
 
-module.exports = sum;
+/**
+ * 高级柯里化
+ *
+ * @param {Function} func
+ * @returns {Function}
+ */
+function curry(func) {
+  return function curried(...arg1) {
+    if (arg1.length >= func.length) {
+      return func.apply(this, arg1);
+    } else {
+      return function (...arg2) {
+        return curried.apply(this, [...arg1, ...arg2]);
+      };
+    }
+  };
+}
+
+module.exports = { sum, curry };

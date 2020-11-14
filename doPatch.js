@@ -41,7 +41,7 @@ function patchAction(node, patch) {
         node.remove();
         break;
       default:
-        node.parentNode.replaceChild(render(node.newNode), node);
+        node.replaceWith(render(node.newNode));
     }
   });
 }

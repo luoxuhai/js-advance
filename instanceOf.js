@@ -5,7 +5,7 @@
  * @returns {boolean} 构造函数的prototype属性是否出现在实例对象的原型链上
  */
 function _instanceof(object, constructor) {
-  if (!/Object|Function/.test(Object.prototype.toString.call(object)))
+  if (!/Object|Function|Array/.test(Object.prototype.toString.call(object)))
     return false;
   if (typeof constructor !== "function")
     throw TypeError("constructor is not an function");
