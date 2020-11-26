@@ -1,4 +1,4 @@
-# JavaScript 笔试/面试手写代码题
+# JavaScript 进阶之路
 
 ## 目录
 
@@ -47,7 +47,8 @@
    - [实现 History 路由](./routers.js)
    - [实现 redux](./redux.js)
    - [实现 虚拟DOM diff](./domDiff.js)
-   - [实现 虚拟DOM 渲染差异](./domDiff.js)
+   - [实现 虚拟DOM 渲染差异](./doPatch.js)
+   - [实现 koa2中间件](./middleware.js)
 
 5. ### 概念
 
