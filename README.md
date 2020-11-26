@@ -42,7 +42,14 @@
    - [节流函数](./throttle.js)
    - [函数柯里化（实现 `sum(1,2)(3)()`）](./currying.js)
 
-4. ### 概念
+4. ### 库/框架
+
+   - [实现 History 路由](./routers.js)
+   - [实现 redux](./redux.js)
+   - [实现 虚拟DOM diff](./domDiff.js)
+   - [实现 虚拟DOM 渲染差异](./domDiff.js)
+
+5. ### 概念
 
    - 原型链
 
